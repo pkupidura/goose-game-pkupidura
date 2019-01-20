@@ -12,7 +12,7 @@ class GameEngineTest extends FlatSpec with Matchers {
 
     val (_, result) = engine.step(AddPlayer("John"))
 
-    result should matchPattern { case PlayerAdded(Seq("John")) => }
+    result shouldEqual PlayerAdded(Seq("John"))
   }
 
   it should "reject adding a player if there is already a player with given name" in {
@@ -23,7 +23,7 @@ class GameEngineTest extends FlatSpec with Matchers {
 
     val (_, result) = engine.step(AddPlayer("John"))
 
-    result should matchPattern { case DuplicatedPlayer("John") => }
+    result shouldEqual DuplicatedPlayer("John")
   }
 
   it should "reject adding a player if game already started and is not accepting new players" in {
@@ -34,6 +34,6 @@ class GameEngineTest extends FlatSpec with Matchers {
 
     val (_, result) = engine.step(AddPlayer("John"))
 
-    result should matchPattern { case AddingPlayersLocked => }
+    result shouldEqual AddingPlayersLocked
   }
 }
