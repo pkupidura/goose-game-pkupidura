@@ -10,6 +10,10 @@ object StepResult {
   }
 
   final case class DuplicatedPlayer(name: String) extends StepResult {
-    def show(): String = s"$name: already existing player"
+    def show(): String = s"$name: already existing player!"
+  }
+
+  final case object AddingPlayersLocked extends StepResult {
+    def show(): String = "Cannot add players after game already started!"
   }
 }

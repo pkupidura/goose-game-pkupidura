@@ -5,7 +5,8 @@ final case class GameState(
   players: Seq[String],
   playersPositions: Map[String, Int],
   allowNewPlayers: Boolean,
-  playersOnFinishLine: Seq[String]
+  playersOnFinishLine: Seq[String],
+  isFinished: Boolean
 )
 
 object GameState {
@@ -14,6 +15,7 @@ object GameState {
     players = Seq.empty,
     playersPositions = Map.empty,
     allowNewPlayers = true,
-    playersOnFinishLine = Seq.empty
+    playersOnFinishLine = Seq.empty,
+    isFinished = false
   )
 }
