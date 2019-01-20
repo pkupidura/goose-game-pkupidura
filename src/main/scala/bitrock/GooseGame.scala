@@ -2,7 +2,11 @@ package bitrock
 import scala.annotation.tailrec
 import scala.io.StdIn
 
+import bitrock.command.CommandParser
+import bitrock.logic.{BoardConfiguration, GameEngine}
+
 object GooseGame {
+
   def main(args: Array[String]): Unit = {
     val config = BoardConfiguration.default
     val game = GameEngine(config)

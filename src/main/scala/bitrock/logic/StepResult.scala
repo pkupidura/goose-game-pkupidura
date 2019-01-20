@@ -1,4 +1,4 @@
-package bitrock
+package bitrock.logic
 
 sealed trait StepResult {
   def show(): String

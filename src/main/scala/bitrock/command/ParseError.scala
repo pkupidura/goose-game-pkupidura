@@ -1,4 +1,4 @@
-package bitrock
+package bitrock.command
 
 sealed trait ParseError {
   def show(): String

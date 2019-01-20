@@ -1,4 +1,4 @@
-package bitrock
+package bitrock.logic
 
 final case class BoardConfiguration(
   size: Int,

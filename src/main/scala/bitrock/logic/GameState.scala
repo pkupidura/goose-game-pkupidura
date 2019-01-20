@@ -1,4 +1,4 @@
-package bitrock
+package bitrock.logic
 
 final case class GameState(
   currentPlayer: Option[String],
@@ -10,6 +10,7 @@ final case class GameState(
 )
 
 object GameState {
+
   def empty: GameState = GameState(
     currentPlayer = None,
     players = Seq.empty,
