@@ -34,4 +34,8 @@ class CommandParserTest extends FlatSpec with Matchers {
     val line = "move John 0, 4"
     CommandParser.parse(line) shouldEqual Left(IncorrectDiceValue(line))
   }
+
+  it should "recognize move without parameters as random move" in {
+    CommandParser.parse("move John") shouldEqual Right(MovePlayerRandomly("John"))
+  }
 }

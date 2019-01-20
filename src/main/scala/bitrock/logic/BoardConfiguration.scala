@@ -1,7 +1,7 @@
 package bitrock.logic
 
 final case class BoardConfiguration(
-  size: Int,
+  length: Int,
   bridges: Map[Int, Int],
   gooses: Set[Int]
 )

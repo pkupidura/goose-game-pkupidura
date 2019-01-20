@@ -19,7 +19,7 @@ object GooseGame {
     if (game.isFinished) {
       game
     } else {
-      val line = StdIn.readLine(game.currentPlayer.map(player => s"$player's turn > ").getOrElse("setup > "))
+      val line = StdIn.readLine("> ")
 
       loop(
         CommandParser.parse(line) match {

@@ -24,6 +24,9 @@ object CommandParser {
             Left(ParseError.IncorrectDiceValue(line))
         }
 
+      case "move" :: name :: Nil =>
+        Right(Command.MovePlayerRandomly(name))
+
       case _ =>
         Left(ParseError.UnknownCommand(line))
     }
