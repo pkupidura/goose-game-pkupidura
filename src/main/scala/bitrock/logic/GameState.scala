@@ -1,22 +1,14 @@
 package bitrock.logic
 
 final case class GameState(
-  currentPlayer: Option[String],
-  players: Seq[String],
-  playersPositions: Map[String, Int],
-  allowNewPlayers: Boolean,
-  playersOnFinishLine: Seq[String],
-  isFinished: Boolean
+  currentPlayer: Option[String] = None,
+  players: Seq[String] = Seq.empty,
+  playersPositions: Map[String, Int] = Map.empty,
+  allowNewPlayers: Boolean = true,
+  playersOnFinishLine: Seq[String] = Seq.empty,
+  isFinished: Boolean = false
 )
 
 object GameState {
-
-  def empty: GameState = GameState(
-    currentPlayer = None,
-    players = Seq.empty,
-    playersPositions = Map.empty,
-    allowNewPlayers = true,
-    playersOnFinishLine = Seq.empty,
-    isFinished = false
-  )
+  def empty: GameState = GameState()
 }

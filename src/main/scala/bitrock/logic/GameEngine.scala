@@ -4,7 +4,7 @@ import bitrock.command.Command
 import bitrock.command.Command.AddPlayer
 import bitrock.logic.StepResult.{AddingPlayersLocked, DuplicatedPlayer, PlayerAdded}
 
-class GameEngine private (config: BoardConfiguration, state: GameState) {
+class GameEngine private[logic] (config: BoardConfiguration, state: GameState) {
 
   def isFinished: Boolean = state.isFinished
 
